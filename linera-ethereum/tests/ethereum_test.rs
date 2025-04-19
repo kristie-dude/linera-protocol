@@ -102,7 +102,7 @@ async fn test_simple_token_events() -> anyhow::Result<()> {
     // Doing the transfer
     // We have to use a direct call since only non-executive operation
     // are done in the client. So, we use a direct call.
-    // First await returns a PendingTransaction and the second does the
+    // First await returns a PendingTransaction, and the second does the
     // mining.
     let value = U256::from(10);
     simple_token.transfer(&addr0, &addr1, value).await?;
